@@ -1,0 +1,98 @@
+/* Estilos da Comunidade Unção Profética */
+:root { --navy: #10283a; --gold: #e8bf74; --paper: #10283a; --ink: #203746; }
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 100px; }
+body { margin: 0; background: var(--paper); color: var(--ink); font-family: Arial, Helvetica, sans-serif; line-height: 1.65; }
+a { color: inherit; }
+.wrap, .largura_nome{ width: min(1120px, 90%); margin-inline: auto; }
+.faixa { background: var(--navy); color: rgb(255, 255, 255); }
+.nome { display: flex; justify-content: space-between; align-items: center; gap: 24px; padding-block: 22px; }
+.nome-cabe { display: flex; align-items: center; gap: 14px; text-decoration: none; font-size: 13px; font-weight: 700; line-height: 1.4; letter-spacing: 1.4px; }
+.cruz-cabe { color: var(--gold); font-size: 38px; }
+.links { display: flex; gap: 28px; }
+.links a { text-decoration: none; font-size: 14px; }
+.links a:hover, .text-link:hover { color: #ffffff; }
+.fundo { background: radial-gradient(ellipse at 90% 10%, #10283a, transparent 65%), var(--navy); color: #ffffff }
+.hero-inner { padding-block: 10px 10px; }
+.eyebrow, .kicker { text-transform: uppercase; letter-spacing: 2px; font-size: 12px; font-weight: 700;}
+.eyebrow { color: var(--gold); }
+h1, h2 { font-family: Georgia, 'Times New Roman', serif; font-weight: 400; line-height: 1.15; margin: 18px 0 24px; }
+h1 { font-size: clamp(42px, 6vw, 76px); max-width: 780px; }
+h1 em { color: var(--gold);}
+h2 { font-size: clamp(30px, 4vw, 46px); }
+.lead { max-width: 590px; font-size: 19px; color: #ffffff; }
+.button { display: inline-block; margin-top: 22px; padding: 14px 25px; background: var(--gold); color: var(--navy); border-radius: 4px; font-weight: 700; text-decoration: none; }
+.button:hover { background: #ec0000; }
+.section { padding-block: 80px; }
+.split { display: grid; grid-template-columns: 1.15fr 1fr; gap: 70px; align-items: center; }
+.kicker { color: #8b632b; text-align: center;}
+.body-copy { font-size: 17px; }
+.verse { border-left: 3px solid var(--gold); padding: 20px 30px; font: italic 26px/1.5 Georgia, serif; }
+.location { background: #dfe7ed; }
+.address { font-size: 19px; }
+.muted { color: #53616a; }
+.text-link { display: inline-block; margin-top: 14px; font-weight: 700; text-underline-offset: 5px; }
+/* A foto preenche apenas este cartão, atrás do convite. */
+.location-card {
+  position: relative;
+  isolation: isolate;
+  width: 100%;
+  min-width: 0;
+  min-height: 360px;
+  border-radius: 8px;
+  overflow: hidden;
+  background: var(--navy);
+  color: white;
+  display: grid;
+  place-items: center;
+  text-align: center;
+}
+.location-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0,0,0,.15), rgba(0,0,0,.65));
+  z-index: 1;
+  pointer-events: none;
+}
+.symbol { display: block; font-size: 64px; color: var(--gold); }
+.location-card p { font: 25px/1.5 Georgia, serif; }
+.closing { text-align: center; }
+.closing p { max-width: 680px; margin-inline: auto; }
+/* cover preenche a div; ajuste object-position para mudar o enquadramento. */
+.igreja {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: center;
+  z-index: 0;
+}
+.texto-cima {
+  position: relative;
+  z-index: 2;
+  padding: 32px;
+  color: white;
+}
+footer { background: var(--navy); color: #e0e7eb; padding-block: 30px; }
+.foot { display: flex; justify-content: space-between; gap: 25px; font-size: 13px; }
+a:focus-visible { outline: 3px solid #b17a25; outline-offset: 5px; }
+@media (max-width: 700px) {
+  .nome { flex-direction: column; align-items: flex-start; gap: 18px; }
+  .links { gap: 22px; }
+  .hero-inner { padding-block: 65px; }
+  .split { grid-template-columns: 1fr; gap: 30px; }
+  .section { padding-block: 55px; }
+  .location-card { padding: 30px; }
+  .foot { flex-direction: column; gap: 8px; }
+}
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+
+/* Cadastro e administração */
+#sobre,.closing{color:#f5f7fa} #sobre .kicker,.closing .kicker{color:var(--gold)}
+.cadastro,.admin{background:#f7f8fa;color:#203746}.cadastro form{max-width:650px}
+label{display:block;margin:16px 0}input,select,button{font:inherit}input:not([type=checkbox]),select{display:block;width:100%;padding:12px;border:1px solid #788895;border-radius:4px;background:white;color:#203746}
+.check{display:flex;align-items:flex-start;gap:10px}.check input{margin-top:7px}button{cursor:pointer;border:0}button:disabled{opacity:.6;cursor:wait}button:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid #b17a25;outline-offset:3px}
+.links{flex-wrap:wrap}.button:hover{background:#f2d49e}.table-wrap{overflow:auto}table{border-collapse:collapse;width:100%;background:white}th,td{padding:12px;text-align:left;border-bottom:1px solid #ccc}td select{min-width:160px}td button{margin:6px;padding:8px}[hidden]{display:none!important}
